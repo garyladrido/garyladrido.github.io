@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Al Naslaa Digital Infrastructure</title>
+  <link rel="canonical" href="https://garyladrido.github.io/alnaslaa/" />
+  <meta name="description" content="The AI factory, engineered in the Gulf. Founder: Gary LaDrido." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #071018;
+      --surface: #0e1a24;
+      --fg: #f4efe6;
+      --muted: #8aa0b0;
+      --primary: #00a3e0;
+      --sun: #00a651;
+      --line: #1c3344;
+      --sans: "IBM Plex Sans", "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+      --display: "Playfair Display", "Noto Naskh Arabic", serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans); }
+    a { color: inherit; }
+    header, footer { border-color: var(--line); }
+    header { border-bottom: 1px solid var(--line); }
+    footer { border-top: 1px solid var(--line); padding: 2rem 1.5rem; font-size: 12px; color: var(--muted); }
+    .wrap { max-width: 72rem; margin: 0 auto; padding: 1rem 1.5rem; }
+    .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; max-width: 72rem; margin: 0 auto; padding: 1rem 1.5rem; }
+    .brand { font-family: var(--display); font-size: 1.125rem; }
+    nav { display: flex; flex-wrap: wrap; gap: 0.25rem; }
+    nav a, .lang button { min-height: 44px; padding: 0.5rem 0.75rem; text-decoration: none; color: var(--muted); background: none; border: 0; font: inherit; cursor: pointer; }
+    nav a:hover, .lang button.on { color: var(--sun); }
+    .hero { display: grid; gap: 2.5rem; padding: 3rem 1.5rem; max-width: 72rem; margin: 0 auto; align-items: center; }
+    @media (min-width: 900px) { .hero { grid-template-columns: 1.1fr 0.9fr; } }
+    .kicker { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sun); }
+    h1 { font-family: var(--display); font-size: clamp(2.8rem, 8vw, 4.5rem); font-weight: 500; margin: 1rem 0 0; }
+    .sub { letter-spacing: 0.2em; text-transform: uppercase; color: var(--sun); font-size: 14px; }
+    .tag { font-family: var(--display); font-style: italic; font-size: 1.5rem; }
+    .muted { color: var(--muted); line-height: 1.6; }
+    .pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+    .pills span, .card { border: 1px solid var(--line); }
+    .pills span { border-radius: 999px; padding: 0.5rem 1rem; font-size: 14px; color: var(--muted); }
+    .btns { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+    .btn { display: inline-flex; min-height: 44px; align-items: center; padding: 0 1.5rem; border-radius: 999px; text-decoration: none; }
+    .btn.g { background: var(--sun); color: var(--bg); font-weight: 500; }
+    .btn.o { border: 1px solid var(--line); }
+    section { border-top: 1px solid var(--line); }
+    section .wrap { padding: 3.5rem 1.5rem; }
+    h2 { font-family: var(--display); font-size: 1.875rem; color: var(--sun); font-weight: 500; }
+    .grid { display: grid; gap: 1rem; }
+    .g2 { grid-template-columns: 1fr; }
+    .g3 { grid-template-columns: 1fr; }
+    .g4 { grid-template-columns: 1fr; }
+    .g5 { grid-template-columns: 1fr; }
+    @media (min-width: 700px) {
+      .g2 { grid-template-columns: 1fr 1fr; }
+      .g3 { grid-template-columns: repeat(3, 1fr); }
+      .g4 { grid-template-columns: repeat(2, 1fr); }
+      .g5 { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (min-width: 1000px) {
+      .g4, .g5 { grid-template-columns: repeat(4, 1fr); }
+      .g5 { grid-template-columns: repeat(5, 1fr); }
+    }
+    .card { background: var(--surface); padding: 1.25rem; }
+    .card h3 { margin: 0; color: var(--primary); font-size: 14px; font-weight: 500; }
+    .stat { font-family: var(--display); font-size: 1.875rem; color: var(--sun); margin: 0; }
+    img.rock { width: 100%; height: auto; border: 1px solid var(--line); }
+    figcaption { font-size: 12px; color: var(--muted); margin-top: 0.5rem; }
+    ul.plain { color: var(--muted); font-size: 14px; padding-left: 1.1rem; }
+    html[lang="ar"] { font-family: "IBM Plex Sans Arabic", var(--sans); }
+    html[lang="ar"] .kicker, html[lang="ar"] .sub { letter-spacing: 0; text-transform: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="#top" data-k="brand">Al Naslaa</a>
+      <nav>
+        <a href="#market" data-k="navMarket">Market</a>
+        <a href="#product" data-k="navProduct">Product</a>
+        <a href="#control" data-k="navControl">Control</a>
+        <a href="#power" data-k="navPower">Power</a>
+        <a href="#business" data-k="navBusiness">Business</a>
+        <a href="#team" data-k="navTeam">Team</a>
+        <a href="#contact" data-k="navContact">Contact</a>
+      </nav>
+      <div class="lang">
+        <button type="button" id="enBtn" class="on" onclick="setLang('en')">English</button>
+        <button type="button" id="arBtn" onclick="setLang('ar')">العربية</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <p class="kicker" data-k="eyebrow">Saudi Arabia · UAE · GCC</p>
+        <h1 data-k="brand">Al Naslaa</h1>
+        <p class="sub" data-k="brandSub">Digital Infrastructure</p>
+        <p class="tag" data-k="tagline">The AI factory, engineered in the Gulf.</p>
+        <p class="muted" data-k="heroBody">One company that designs, builds, and operates the physical and intelligent infrastructure behind AI, from edge nodes to sovereign-scale campuses.</p>
+        <div class="pills">
+          <span data-k="pill0">Modular Build</span>
+          <span data-k="pill1">Precision MEP</span>
+          <span data-k="pill2">Mission-Critical Delivery</span>
+        </div>
+        <div class="btns">
+          <a class="btn g" href="#market" data-k="ctaMarket">See the opportunity</a>
+          <a class="btn o" href="#contact" data-k="ctaTalk">Talk to us</a>
+        </div>
+      </div>
+      <svg viewBox="0 0 280 280" role="img" aria-label="Al Naslaa split rock">
+        <defs>
+          <linearGradient id="L" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#5ed18a" /><stop offset="55%" stop-color="#00a651" /><stop offset="100%" stop-color="#006633" />
+          </linearGradient>
+          <linearGradient id="R" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#7ec8f5" /><stop offset="50%" stop-color="#00a3e0" /><stop offset="100%" stop-color="#006b99" />
+          </linearGradient>
+        </defs>
+        <path d="M62 40c0-10 10-18 28-18h12c22 0 34 12 36 28v148c0 10-8 18-22 18H84c-14 0-22-8-22-18z" fill="url(#L)"/>
+        <path d="M150 50c0-10 10-18 26-18h14c20 0 32 12 34 28v138c0 10-8 18-22 18h-32c-14 0-20-8-20-18z" fill="url(#R)"/>
+        <rect x="136" y="36" width="8" height="188" fill="#071018"/>
+      </svg>
+    </div>
+
+    <section id="market">
+      <div class="wrap grid g2">
+        <div>
+          <h2 data-k="whyTitle">Why Al Naslaa</h2>
+          <p data-k="whyBody">One stone. A perfect split. Still standing. The Al Naslaa rock sits about 50 km south of Tayma, Saudi Arabia: a sandstone monolith about 6 metres high and 9 metres wide, cleaved by a joint so straight it looks cut. Each half balances on its own pedestal. Wind and weathering did the work. That is the standard. Two disciplines. One company.</p>
+          <ul class="plain">
+            <li data-k="why0">Two halves, one stone. Physical build and AI intelligence, split by discipline, united as one company.</li>
+            <li data-k="why1">Engineered precision. The cut is the standard: modular, tender-ready, manufactured accuracy.</li>
+            <li data-k="why2">Built to endure. Mission-critical plant designed for the Gulf, and to run for decades.</li>
+          </ul>
+        </div>
+        <figure>
+          <img class="rock" src="al-naslaa-rock.jpg" alt="Al Naslaa, the split sandstone near Tayma, Saudi Arabia" width="1200" height="800" />
+          <figcaption data-k="rockCap">Al Naslaa, Tayma oasis, Saudi Arabia. The namesake.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2 data-k="momentTitle">The moment</h2>
+        <p class="muted" data-k="momentBody">The Gulf is building its digital economy, and AI needs a body. Compute demand is rising while the region pivots from oil to digital. Vision 2030, sovereign-AI mandates, and data-residency rules pull infrastructure onshore. AI is energy and heat constrained. The Gulf has cheap power and the capital to deploy at scale.</p>
+        <div class="grid g4" style="margin-top:2rem">
+          <article class="card"><h3 data-k="m0t">Sovereign mandate</h3><p class="muted" data-k="m0b">Vision 2030 and national-cloud strategies require compute and data in-region.</p></article>
+          <article class="card"><h3 data-k="m1t">Energy advantage</h3><p class="muted" data-k="m1b">Industrial power near $0.04 to $0.06/kWh plus solar build-out.</p></article>
+          <article class="card"><h3 data-k="m2t">Capital is ready</h3><p class="muted" data-k="m2b">PIF, Mubadala, MGX and global infra investors are funding GCC digital infrastructure.</p></article>
+          <article class="card"><h3 data-k="m3t">Speed wins</h3><p class="muted" data-k="m3b">Modular, prefabricated delivery compresses build time from years to months.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2 data-k="gccTitle">The GCC opportunity</h2>
+        <p class="muted" data-k="gccBody">Across the six GCC states, the data-center pipeline runs to tens of billions, with vacancy in the core hubs near zero. Demand is outrunning supply.</p>
+        <div class="grid g4" style="margin-top:2rem">
+          <article class="card"><p class="stat">~$93B</p><p class="muted" data-k="s0">Combined regional pipeline</p></article>
+          <article class="card"><p class="stat">~18% CAGR</p><p class="muted" data-k="s1">GCC data-center market, 2024 to 2030</p></article>
+          <article class="card"><p class="stat">6.6 GW</p><p class="muted" data-k="s2">Saudi national capacity target through 2034</p></article>
+          <article class="card"><p class="stat"><2.4%</p><p class="muted" data-k="s3">Reported vacancy in UAE core</p></article>
+        </div>
+        <p class="muted" style="margin-top:2rem" data-k="gccNote">Hyperscalers and sovereign programs chase 50 to 100 MW+ mega-sites. That leaves the 1 to 10 MW edge layer open: closer to users, faster to deploy. We start there, then scale to campus.</p>
+      </div>
+    </section>
+
+    <section id="product">
+      <div class="wrap">
+        <h2 data-k="productTitle">The product</h2>
+        <p class="muted" data-k="productBody">The AI factory: one platform, five layers. A repeatable stack, sold as a campus, a phased expansion, or a distributed edge network.</p>
+        <div class="grid g5" style="margin-top:2rem">
+          <article class="card"><p class="kicker">01</p><h3 data-k="l0t">Compute</h3><p class="muted" data-k="l0b">GPU racks, busbar, whitespace, network-ready halls.</p></article>
+          <article class="card"><p class="kicker">02</p><h3 data-k="l1t">Cooling</h3><p class="muted" data-k="l1b">Cold plates, CDUs, manifolds, secondary loop, dry coolers.</p></article>
+          <article class="card"><p class="kicker">03</p><h3 data-k="l2t">Power</h3><p class="muted" data-k="l2b">A/B/C feeds, hybrid redundancy, switchgear, transformers.</p></article>
+          <article class="card"><p class="kicker">04</p><h3 data-k="l3t">Energy</h3><p class="muted" data-k="l3b">Grid, solar, battery storage, dispatch logic.</p></article>
+          <article class="card"><p class="kicker">05</p><h3 data-k="l4t">Control</h3><p class="muted" data-k="l4b">Twin, DCIM, BMS. How the plant runs.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="control">
+      <div class="wrap">
+        <h2 data-k="controlTitle">Control</h2>
+        <p data-k="controlBody">A factory without an operating system is a building. Layer 05 is plant control: twin, DCIM, BMS, closed-loop setpoints on cooling and power. How Al Naslaa runs what it builds.</p>
+      </div>
+    </section>
+
+    <section id="power">
+      <div class="wrap">
+        <h2 data-k="powerTitle">Power</h2>
+        <p class="muted" data-k="powerBody">Power is the moat. Grid and substation lead times are the bottleneck. Behind-the-meter and hybrid sites: gas + CHP + flare gas for speed-to-power, fuel cells, solar + BESS. SMRs remain a 2030+ option, not a present claim.</p>
+      </div>
+    </section>
+
+    <section id="business">
+      <div class="wrap">
+        <h2 data-k="businessTitle">Business</h2>
+        <p class="muted" data-k="businessBody">Four ways to sell one product family: owned campuses, build-to-suit / leased, embedded whitespace, energy-linked compute. Reference unit economics stay illustrative: $8 to $12M per MW edge, 15 to 25% target IRR, 3 to 5 year payback.</p>
+      </div>
+    </section>
+
+    <section id="team">
+      <div class="wrap">
+        <h2 data-k="teamTitle">Team</h2>
+        <article class="card" style="max-width:28rem;margin-top:2rem">
+          <p class="kicker" data-k="founder">Founder</p>
+          <h3 style="font-family:var(--display);font-size:1.5rem;color:var(--fg);margin-top:0.5rem">Gary LaDrido</h3>
+          <p><a class="btn o" style="margin-top:1rem" href="https://www.linkedin.com/in/garyladrido" target="_blank" rel="noreferrer" data-k="linkedin">LinkedIn</a></p>
+          <p><a class="btn o" style="margin-top:0.5rem" href="Al_Naslaa_Advisory_Deck.pptx">Download the deck</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <h2 data-k="contactTitle">Engage</h2>
+        <p class="muted" data-k="contactBody">Telcos, enterprises, hyperscalers, sovereign programs.</p>
+        <p style="margin-top:1.5rem"><a class="btn g" href="mailto:gary.ladrido@gmail.com">gary.ladrido@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap" data-k="footer">Al Naslaa Digital Infrastructure. Founder: Gary LaDrido. Informational only. Not an offer of securities. Named programs and logos are public context, not confirmed relationships.</div>
+  </footer>
+
+  <script>
+    const AR = {
+      brand: "النصلة", brandSub: "البنية التحتية الرقمية",
+      eyebrow: "المملكة العربية السعودية · الإمارات · الخليج",
+      tagline: "مصنع الذكاء الاصطناعي، مصمم في الخليج.",
+      heroBody: "شركة واحدة تصمم وتبني وتشغّل البنية المادية والذكية وراء الذكاء الاصطناعي، من عقد الحافة إلى مجمعات سيادية واسعة النطاق.",
+      pill0: "بناء معياري", pill1: "أعمال كهروميكانيكية دقيقة", pill2: "تسليم للمواقع الحرجة",
+      ctaMarket: "الفرصة", ctaTalk: "تحدث معنا",
+      navMarket: "السوق", navProduct: "المنتج", navControl: "التحكم", navPower: "الطاقة", navBusiness: "الأعمال", navTeam: "الفريق", navContact: "تواصل",
+      whyTitle: "لماذا النصلة",
+      whyBody: "حجر واحد. شقّ مستقيم. لا يزال قائماً. صخرة النصلة على بعد نحو 50 كيلومتراً جنوب تيماء في المملكة العربية السعودية.",
+      why0: "نصفان وحجر واحد. البناء المادي وذكاء التشغيل، منفصلان تخصصاً ومتحدان كشركة.",
+      why1: "دقة هندسية. القطع هو المعيار.",
+      why2: "مصمم للبقاء. منشأة حرجة صُممت للخليج لتعمل لعقود.",
+      rockCap: "النصلة، واحة تيماء، المملكة العربية السعودية. الاسم.",
+      momentTitle: "اللحظة",
+      momentBody: "الخليج يبني اقتصاده الرقمي، والذكاء الاصطناعي يحتاج جسداً.",
+      m0t: "تكليف سيادي", m0b: "رؤية 2030 واستراتيجيات السحابة الوطنية تتطلب الحوسبة والبيانات داخل المنطقة.",
+      m1t: "ميزة الطاقة", m1b: "طاقة صناعية قرب 0.04 إلى 0.06 دولار للكيلوواط ساعة مع توسع شمسي.",
+      m2t: "رأس المال جاهز", m2b: "صندوق الاستثمارات العامة ومبادلة وMGX يموّلون البنية الرقمية في الخليج.",
+      m3t: "السرعة تفوز", m3b: "التسليم المعياري يضغط زمن البناء من سنوات إلى أشهر.",
+      gccTitle: "فرصة مجلس التعاون", gccBody: "عبر دول المجلس الست يصل خط أنابيب مراكز البيانات إلى عشرات المليارات.",
+      s0: "خط الأنابيب الإقليمي المجمع", s1: "سوق مراكز البيانات في الخليج، 2024 إلى 2030", s2: "الهدف الوطني السعودي حتى 2034", s3: "الشواغر المعلنة في قلب الإمارات",
+      gccNote: "نبدأ عند طبقة الحافة من 1 إلى 10 ميغاواط ثم نتوسع إلى المجمع.",
+      productTitle: "المنتج", productBody: "مصنع الذكاء الاصطناعي: منصة واحدة، خمس طبقات.",
+      l0t: "الحوسبة", l0b: "رفوف معالجات، قضبان توزيع، قاعات جاهزة للشبكة.",
+      l1t: "التبريد", l1b: "صفائح باردة، وحدات توزيع سائل، مبردات جافة.",
+      l2t: "القدرة", l2b: "تغذيات أ/ب/ج، معدات قطع، محولات.",
+      l3t: "الطاقة", l3b: "الشبكة، الشمس، التخزين بالبطاريات.",
+      l4t: "التحكم", l4b: "التوأم الرقمي، إدارة البنية، أنظمة المبنى.",
+      controlTitle: "التحكم", controlBody: "مصنع بلا نظام تشغيل مجرد مبنى. الطبقة الخامسة هي تحكم المنشأة.",
+      powerTitle: "الطاقة", powerBody: "الطاقة هي الخندق. أزمنة الشبكة والمحطات الفرعية هي الاختناق.",
+      businessTitle: "الأعمال", businessBody: "مجمعات مملوكة، بناء حسب الطلب، مساحات مدمجة، وحوسبة مرتبطة بالطاقة.",
+      teamTitle: "الفريق", founder: "المؤسس", linkedin: "لينكدإن",
+      contactTitle: "تواصل", contactBody: "شركات اتصالات، مؤسسات، موفرو سحابة، وبرامج سيادية.",
+      footer: "النصلة للبنية التحتية الرقمية. المؤسس: Gary LaDrido. لأغراض معلوماتية فقط. ليست عرضاً لأوراق مالية."
+    };
+    const EN = {};
+    document.querySelectorAll("[data-k]").forEach((el) => { EN[el.getAttribute("data-k")] = el.textContent; });
+    function setLang(l) {
+      document.documentElement.lang = l;
+      document.documentElement.dir = l === "ar" ? "rtl" : "ltr";
+      document.getElementById("enBtn").classList.toggle("on", l === "en");
+      document.getElementById("arBtn").classList.toggle("on", l === "ar");
+      const pack = l === "ar" ? AR : EN;
+      document.querySelectorAll("[data-k]").forEach((el) => {
+        const k = el.getAttribute("data-k");
+        if (pack[k]) el.textContent = pack[k];
+      });
+      try { localStorage.setItem("alnaslaa-lang", l); } catch (e) {}
+    }
+    try { const s = localStorage.getItem("alnaslaa-lang"); if (s === "ar") setLang("ar"); } catch (e) {}
+  </script>
+</body>
+</html>
