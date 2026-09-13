@@ -3,86 +3,167 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kingmaker Inc.</title>
-  <meta name="description" content="Kingmaker Inc. is a venture studio. Originates companies, hires the operator, spins. Gridhall, Ganttry, Verdict. Chairman: Gary LaDrido." />
+  <title>Kingmaker Inc. | Venture Studio</title>
+  <meta name="description" content="Kingmaker Inc. is a venture studio. We originate companies in distribution, proprietary data, workflow, and physical plant. We hire the operator. Gridhall, Ganttry, Verdict. Chairman: Gary LaDrido." />
   <link rel="canonical" href="https://garyladrido.github.io/kingmaker/" />
-  <style>
-    :root { --bg:#0e0d0c; --fg:#f1eadf; --muted:#8f877c; --sun:#c4a574; --line:#2a2722; --sans:system-ui,sans-serif; --display:Georgia,serif; }
-    * { box-sizing:border-box; }
-    html, body { margin:0; background:var(--bg); color:var(--fg); font-family:var(--sans); }
-    a { color:inherit; }
-    header { border-bottom:1px solid var(--line); }
-    footer, section { border-top:1px solid var(--line); }
-    .bar, .wrap { max-width:48rem; margin:0 auto; padding:1.25rem 1.5rem; }
-    .bar { display:flex; align-items:center; justify-content:space-between; }
-    .kicker { font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:var(--sun); }
-    h1 { font-family:var(--display); font-weight:500; font-size:clamp(2.8rem,8vw,4.5rem); margin:1rem 0 0; }
-    h2 { font-family:var(--display); font-weight:500; font-size:1.75rem; color:var(--sun); }
-    h3 { font-family:var(--display); font-weight:500; font-size:1.5rem; margin:0.5rem 0 0; }
-    .muted { color:var(--muted); line-height:1.65; }
-    .hero { padding:4rem 1.5rem 5rem; max-width:48rem; margin:0 auto; }
-    .list { list-style:none; padding:0; margin:2.5rem 0 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-    .list li { padding:2rem 0; border-bottom:1px solid var(--line); }
-    .list li:last-child { border-bottom:0; }
-    ol { color:var(--muted); line-height:1.7; padding-left:1.1rem; }
-    .btn { display:inline-flex; min-height:44px; align-items:center; padding:0 1.5rem; background:var(--sun); color:var(--bg); text-decoration:none; font-size:14px; font-weight:500; margin-top:2rem; }
-    footer { padding:2.5rem 1.5rem; font-size:12px; color:var(--muted); }
-    footer a { color:var(--sun); }
-  </style>
+  <meta property="og:title" content="Kingmaker Inc. | Venture Studio" />
+  <meta property="og:description" content="We make the operator. Three companies. Three empty chairs." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/main.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Kingmaker Inc.","alternateName":"Kingmaker Studio","url":"https://garyladrido.github.io/kingmaker/","foundingDate":"2025-06-06","description":"Venture studio. Originates companies, hires the operator, spins.","founder":{"@type":"Person","name":"Gary LaDrido","jobTitle":"Chairman"},"knowsAbout":["venture studio","data center workforce","construction logistics","site evaluation"]}
+  </script>
 </head>
 <body>
   <header>
     <div class="bar">
-      <p class="kicker" style="margin:0">Kingmaker Inc.</p>
-      <a href="/" style="min-height:44px;display:inline-flex;align-items:center;color:var(--muted);text-decoration:none">Chairman</a>
+      <a class="brand" href="index.html">Kingmaker</a>
+      <nav>
+        <a href="index.html" class="on">Studio</a>
+        <a href="why-studio.html">Why a studio</a>
+        <a href="thesis.html">Thesis</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </header>
-  <section class="hero" style="border-top:0">
-    <p class="kicker">Venture studio · Delaware · June 2025</p>
+
+  <section class="hero">
+    <p class="kicker">Venture studio · Kingmaker Inc. · Delaware · June 2025</p>
     <h1>We make the operator.</h1>
-    <p class="muted" style="max-width:36rem;font-size:1.125rem;margin-top:2rem">
-      Kingmaker is a venture studio. It originates companies in distribution, proprietary data, workflow, and physical plant.
-      We hire the chief executive. We keep the equity until the chair is filled. This is not an incubator.
-      Strangers do not walk in with a deck.
-    </p>
+    <p class="lede">Kingmaker originates companies. We do not take in strangers with a deck. We do not rent desks. We do not run a twelve-week demo day. We research a market, build the first product, hire the chief executive, and keep the equity until that chair is filled.</p>
+    <p class="muted" style="max-width:38rem">The legal name is Kingmaker Inc. The public name is the studio. The domain is kingmakerstudio.inc once DNS is live. Until then this page is the book.</p>
+    <a class="btn" href="#portfolio">See the three companies</a>
+    <a class="btn ghost" href="why-studio.html">Studio, not incubator</a>
   </section>
+
+  <section id="what">
+    <div class="wrap">
+      <p class="kicker">Nomenclature</p>
+      <h2>Venture studio. That is the noun.</h2>
+      <p>An incubator nurtures other people's companies. An idea lab prototypes and shelves. A venture studio is a factory with a co-founder stake. Kingmaker researches the problem, writes the first product, and recruits the person who will run it. Typical studio equity is thirty to eighty percent until the operator is named. That is the model. That is this company.</p>
+      <p>Red Rock Ventures writes checks into other people. DCB Sports holds the sports book. Renewable Advisors is the craft. Kingmaker is none of those. Kingmaker is where a new operating company is born when Gary has a thesis and no one yet to run it.</p>
+    </div>
+  </section>
+
   <section>
     <div class="wrap">
-      <h2>Portfolio</h2>
-      <p class="muted">Three companies. Three empty chairs. That is the work. RoboTech is Red Rock. Not here.</p>
+      <p class="kicker">How a company is made</p>
+      <h2>Six moves. Then a chair.</h2>
+      <ol class="steps">
+        <li>A market is named. Not a slogan. A buyer, a budget, a workflow that already hurts.</li>
+        <li>The filters are applied. Distribution. Proprietary data. Workflow ownership. Physical plant. If it is a wrapper on someone else's model, it dies here.</li>
+        <li>The first product is built inside the studio. Website, deck, unit economics marked as a model, the first ten conversations.</li>
+        <li>A chief executive is recruited. Not a founder-in-residence theater. A person who will live in the company.</li>
+        <li>Kingmaker keeps the equity. Thirty to eighty percent until that chair is filled. Then the operator earns their share by running it.</li>
+        <li>The company leaves the studio as its own letterhead. Kingmaker remains the parent. Gary remains Chairman of Kingmaker. He is Founder of the spin until he is not.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="kicker">The four filters</p>
+      <h2>Where the money actually is.</h2>
+      <p>The money is increasingly in distribution, proprietary data, workflow ownership, and physical infrastructure. That sentence is the gate. Everything Kingmaker builds has to pass it.</p>
+      <div class="grid g2" style="margin-top:1.5rem">
+        <article class="card">
+          <h3>Distribution</h3>
+          <p>Who already has the customer. A studio that cannot name the channel is writing a brochure.</p>
+        </article>
+        <article class="card">
+          <h3>Proprietary data</h3>
+          <p>A docket, a score, a pad clock, a ticket that nobody else has. Not a scrape of the public web.</p>
+        </article>
+        <article class="card">
+          <h3>Workflow</h3>
+          <p>The job as it is done on a live site. Diagnose, fund, ticket. Three clocks on a pad. A Green-Light that an IC can read.</p>
+        </article>
+        <article class="card">
+          <h3>Physical plant</h3>
+          <p>Data halls, substations, water, labor hours, steel. Not another chatbot. Not a token with AI in the press release.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="kicker">What we will not do</p>
+      <h2>The no list is the strategy.</h2>
+      <ul>
+        <li class="no">We will not start another generic chatbot.</li>
+        <li class="no">We will not build an AI wrapper with no distribution.</li>
+        <li class="no">We will not chase every new AI token.</li>
+        <li class="no">We will not buy random AI stocks because they have AI in the press release.</li>
+        <li class="no">We will not spend a year building before talking to customers.</li>
+        <li class="no">We will not compete directly with OpenAI, Anthropic, or Google.</li>
+      </ul>
+      <p>Mailbox money is the hope. Self-sustaining companies. Real jobs. A human in the chair. Gary is Founder of each spin until that human exists. Then he is Chairman of the studio and, if the papers say so, of the company.</p>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="wrap">
+      <p class="kicker">Portfolio</p>
+      <h2>Three companies. Three empty chairs.</h2>
+      <p>That is the work. RoboTech is Red Rock. Al Naslaa is its own operating company. They do not live here.</p>
       <ul class="list">
         <li>
-          <p class="kicker">Operator not named</p>
-          <h3><a href="../gridhall/">Gridhall Academy</a></h3>
-          <p class="muted" style="margin:0.25rem 0 0;font-size:14px">gridhall.ai</p>
-          <p class="muted">The trades into the hall. Diagnose, fund, ticket. The tutor is a lamp.</p>
+          <p class="kicker">Operator not named · gridhall.ai</p>
+          <h3>Gridhall Academy</h3>
+          <p>The trades into the hall. Data center technicians, electricians, the people who actually stand up a megawatt. Diagnose the candidate. Fund the seat. Ticket them into a live plant. The tutor is a lamp, not the company. Grid is a euphemism for the industrial stack behind compute. Gridhall is the hall those people walk into.</p>
+          <p>Gary is Founder until an operator is named. Domain owned: gridhall.ai.</p>
         </li>
         <li>
-          <p class="kicker">Operator not named</p>
-          <h3><a href="../ganttry/">Ganttry AI</a></h3>
-          <p class="muted" style="margin:0.25rem 0 0;font-size:14px">ganttry.ai</p>
-          <p class="muted">The three clocks on a live data center pad. Workflow of the job, not a pretty Gantt.</p>
+          <p class="kicker">Operator not named · ganttry.ai</p>
+          <h3>Ganttry AI</h3>
+          <p>The workflow of a live data center pad. Three clocks, not a pretty Gantt chart. Construction logistics for the industrial stack: when the transformer leaves the factory, when the pad is at strength, when the crane is paid to wait. Ganttry is mailbox money if the pad runs. It is a cost center if it is a slide.</p>
+          <p>Gary is Founder until an operator is named. Domains owned: ganttry.ai, ganttryai.com, ganttlyai.com. The name is Ganttry.</p>
         </li>
         <li>
-          <p class="kicker">Operator not named</p>
-          <h3><a href="../verdict/">Verdict</a></h3>
-          <p class="muted" style="margin:0.25rem 0 0;font-size:14px">Verdict Score</p>
-          <p class="muted">Affirmative Green-Light on an AI site. Ratepayer, water, town. Fee-for-service.</p>
+          <p class="kicker">Operator not named · Verdict Score</p>
+          <h3>Verdict</h3>
+          <p>Affirmative scoring of AI and data center sites. Green-Light against ratepayer protection, water, and local prosperity. Red flags where a site draws the residential grid, burns a farm, or shows up in court. Independent fee-for-service. Not a wrapper once the docket is proprietary. Was Valence. The name is Verdict. The product is Verdict Score.</p>
+          <p>Gary is Founder until an operator is named. No public Founder line on a consumer homepage until the chair exists. Inside Kingmaker, it is real.</p>
         </li>
       </ul>
     </div>
   </section>
+
   <section>
     <div class="wrap">
-      <h2>The chairs</h2>
-      <p class="muted" style="max-width:36rem">If you run training into a plant, logistics on a pad, or site diligence for an IC, write the Chairman.</p>
+      <p class="kicker">The chairs</p>
+      <h2>If you run one of these, write.</h2>
+      <p>We are hiring operators, not interns with a thesis. If you have run training into a plant, logistics on a pad, or site diligence for an investment committee, the Chairman will read the note.</p>
       <a class="btn" href="mailto:gary.ladrido@gmail.com?subject=Kingmaker%20operator">Write the Chairman</a>
     </div>
   </section>
+
+  <section>
+    <div class="wrap">
+      <p class="kicker">Chairman</p>
+      <h2>Gary LaDrido</h2>
+      <p>Chairman of Kingmaker Inc. Founder of each spin until an operator is named. Twenty years and more than $15 billion of energy-transition transactions, including Morgan Stanley's Clean Energy team and the Tesla IPO in 2012. He owns the vehicles. Operators take the chairs.</p>
+      <p>The family office is private. Red Rock is the co-invest fund. DCB is the sports book. Kingmaker is the factory. One speaker per URL. This URL speaks for the studio.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="kicker">Legal</p>
+      <h2>Kingmaker Inc.</h2>
+      <p>Delaware C-corporation. Filed 6 June 2025. File 10219864. The exact legal name is Kingmaker Inc. The public site is the studio. kingmakerinc.com matches the charter. kingmakerstudio.inc is the name of the factory on the door. Point both at this build when DNS is ready.</p>
+    </div>
+  </section>
+
   <footer>
     <div class="wrap">
-      <p>Kingmaker Inc. File 10219864. 5,000 common. No par.</p>
-      <p>Chairman: <a href="/">Gary LaDrido</a></p>
+      <p>Kingmaker Inc. Venture studio. Chairman, Gary LaDrido.</p>
+      <p><a href="why-studio.html">Why a studio</a> · <a href="thesis.html">Thesis</a> · <a href="contact.html">Contact</a> · <a href="mailto:gary.ladrido@gmail.com">gary.ladrido@gmail.com</a></p>
     </div>
   </footer>
 </body>
