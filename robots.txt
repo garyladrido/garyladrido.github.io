@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://garyladrido.com/sitemap.xml
+Sitemap: https://garyladrido.github.io/sitemap.xml
