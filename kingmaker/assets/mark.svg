@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Kingmaker">
+  <rect width="200" height="200" fill="#0e0d0c"/>
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#c4a574" stroke-width="1.5"/>
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#c4a574" stroke-width="0.6"/>
+  <path d="M74 50 V150 M74 100 L132 50 M74 100 L132 150" fill="none" stroke="#c4a574" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"/>
+</svg>

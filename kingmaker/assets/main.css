@@ -13,19 +13,21 @@ html, body { margin: 0; background: var(--bg); color: var(--fg); font-family: va
 a { color: inherit; }
 header { border-bottom: 1px solid var(--line); }
 footer, section { border-top: 1px solid var(--line); }
-.bar, .wrap { max-width: 52rem; margin: 0 auto; padding: 1.25rem 1.5rem; }
-.bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-.bar nav { display: flex; flex-wrap: wrap; gap: 0.25rem; }
-.bar nav a { min-height: 44px; display: inline-flex; align-items: center; padding: 0 0.7rem; color: var(--muted); text-decoration: none; font-size: 13px; }
+.bar, .wrap { max-width: 56rem; margin: 0 auto; padding: 1.25rem 1.5rem; }
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.bar nav { display: flex; flex-wrap: wrap; gap: 0.15rem; }
+.bar nav a { min-height: 44px; display: inline-flex; align-items: center; padding: 0 0.65rem; color: var(--muted); text-decoration: none; font-size: 13px; }
 .bar nav a:hover, .bar nav a.on { color: var(--sun); }
-.brand { font-family: var(--display); text-decoration: none; font-size: 1.125rem; }
+.brand { font-family: var(--display); text-decoration: none; font-size: 1.125rem; display: inline-flex; align-items: center; gap: 0.6rem; }
+.brand img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line); }
 .kicker { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sun); margin: 0; }
 h1 { font-family: var(--display); font-weight: 500; font-size: clamp(2.6rem, 8vw, 4.4rem); margin: 1rem 0 0; line-height: 1.05; }
 h2 { font-family: var(--display); font-weight: 500; font-size: 1.75rem; color: var(--sun); }
 h3 { font-family: var(--display); font-weight: 500; font-size: 1.35rem; margin: 0.4rem 0 0; }
 .muted, p, li { color: var(--muted); line-height: 1.7; }
-.hero { padding: 4.5rem 1.5rem 5rem; max-width: 52rem; margin: 0 auto; border-top: 0; }
-.lede { font-size: 1.15rem; max-width: 38rem; margin-top: 1.75rem; }
+.hero { padding: 4.5rem 1.5rem 5rem; max-width: 56rem; margin: 0 auto; border-top: 0; }
+.hero .mark { width: 88px; height: 88px; border-radius: 50%; border: 1px solid var(--line); margin-bottom: 1.25rem; }
+.lede { font-size: 1.15rem; max-width: 40rem; margin-top: 1.75rem; }
 .grid { display: grid; gap: 1rem; }
 .g2 { grid-template-columns: 1fr; }
 .g3 { grid-template-columns: 1fr; }
@@ -51,3 +53,4 @@ form { display: grid; gap: 0.75rem; max-width: 28rem; }
 input, textarea { background: var(--surface); border: 1px solid var(--line); color: var(--fg); padding: 0.8rem; font: inherit; }
 button[type="submit"] { min-height: 44px; background: var(--sun); border: 0; font: inherit; font-weight: 500; cursor: pointer; }
 .hp { position: absolute; left: -9999px; }
+.horizon { font-family: var(--display); color: var(--sun); font-size: 0.9rem; letter-spacing: 0.12em; text-transform: uppercase; }
